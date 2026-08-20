@@ -7,7 +7,7 @@ local Language = nil
 local function LoadHub()
     if Language == "Portuguese" then
         loadstring(game:HttpGet(
-            "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacility.lua"
+            "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacilityBr.lua"
         ))()
 
     elseif Language == "English" then
@@ -24,7 +24,7 @@ WindUI:Popup({
 
     Buttons = {
         {
-            Title = " Portugu�s",
+            Title = "🇧🇷 Português",
             Variant = "Primary",
 
             Callback = function()
@@ -34,7 +34,7 @@ WindUI:Popup({
         },
 
         {
-            Title = " English",
+            Title = "🇺🇸 English",
             Variant = "Primary",
 
             Callback = function()
