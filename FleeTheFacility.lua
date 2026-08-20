@@ -3,17 +3,48 @@ local WindUI = loadstring(game:HttpGet(
 ))()
 
 local Language = nil
+local Loading = false
 
 local function LoadHub()
+    if Loading then
+        return
+    end
+
+    Loading = true
+
     if Language == "Portuguese" then
-        loadstring(game:HttpGet(
-            "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacilityBr.lua"
-        ))()
+        local Success, Error = pcall(function()
+            local Source = game:HttpGet(
+                "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacilityBr.lua"
+            )
+
+            local Hub = loadstring(Source)
+
+            if Hub then
+                Hub()
+            end
+        end)
+
+        if not Success then
+            warn("Portuguese Hub Error:", Error)
+        end
 
     elseif Language == "English" then
-        loadstring(game:HttpGet(
-            "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacilityEng.lua"
-        ))()
+        local Success, Error = pcall(function()
+            local Source = game:HttpGet(
+                "https://raw.githubusercontent.com/Monarchyz/MonarchyHub/main/FleeTheFacilityEng.lua"
+            )
+
+            local Hub = loadstring(Source)
+
+            if Hub then
+                Hub()
+            end
+        end)
+
+        if not Success then
+            warn("English Hub Error:", Error)
+        end
     end
 end
 
