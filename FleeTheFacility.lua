@@ -24,7 +24,7 @@ WindUI:Popup({
 
     Buttons = {
         {
-            Title = "🇧🇷 Português",
+            Title = "Portugues",
             Variant = "Primary",
 
             Callback = function()
@@ -34,7 +34,7 @@ WindUI:Popup({
         },
 
         {
-            Title = "🇺🇸 English",
+            Title = "English",
             Variant = "Primary",
 
             Callback = function()
